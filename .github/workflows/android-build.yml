@@ -18,13 +18,10 @@ jobs:
         distribution: 'temurin'
         java-version: 17
 
-    - name: Grant Gradle permission
-      run: chmod +x ./gradlew
-
     - name: Build debug APK
       run: ./gradlew assembleDebug
 
-    - name: Upload debug APK as artifact
+    - name: Upload debug APK
       uses: actions/upload-artifact@v3
       with:
         name: debug-apk

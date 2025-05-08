@@ -19,7 +19,7 @@ jobs:
         java-version: 17
 
     - name: Build debug APK
-      run: ./gradlew assembleDebug
+      run: ./gradlew assembleDebug --stacktrace
 
     # - name: Upload debug APK
     #   uses: actions/upload-artifact@v2
